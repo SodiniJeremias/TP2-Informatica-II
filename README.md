@@ -1,6 +1,6 @@
-#Control automático de barrera de estacionamiento
+# Control automático de barrera de estacionamiento
 
-##Memoria descriptiva:
+## Memoria descriptiva:
 En este sistema vamos a implementar un control automático para la barrera de un estacionamiento. 
 
 En un primer momento la barrera permanecerá abajo, evitando el paso de vehículos. 
