@@ -1,4 +1,4 @@
-# Control automático de barrera de estacionamiento
+# Control automático de barrera para estacionamiento
 
 ## Memoria descriptiva:
 En este sistema vamos a implementar un control automático para la barrera de un estacionamiento. 
