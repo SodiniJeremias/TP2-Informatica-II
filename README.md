@@ -13,5 +13,6 @@ En el estado **"CERRANDO"** la barrera bajará hasta tocar otro final de carrera
 
 Si estamos en el estado **"CERRANDO"** y se detecta algún vehículo debajo de la barrera, está frenará su bajada y volverá a subir, volviendo al estado **"ABRIENDO".**
 
+## Maquina de estado:
 <img width="1002" height="721" alt="image" src="https://github.com/user-attachments/assets/b11e3c12-39c8-4144-84a0-f12294ae6853" />
 
