@@ -11,4 +11,4 @@ Llegado a este estado, con un sensor infrarrojo, estaremos leyendo constantement
 
 Si mientras la barrera está bajando se detecta algún vehículo, está frenará su bajada y volverá a subir. 
 
-La barrera bajará hasta tocar otro final de carrera.  
+La barrera bajará hasta tocar otro final de carrera. Y de esta menera volvera al primer estado.
