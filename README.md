@@ -1,7 +1,7 @@
 # Control automático de barrera para estacionamiento
 
 ## Memoria descriptiva:
-En este sistema se encarga del control automático para la barrera de un estacionamiento. 
+Este sistema se encarga del control automático para la barrera de un estacionamiento. 
 
 En un primer momento la barrera permanecerá abajo, evitando el paso de vehículos. Cuando una persona toque el botón  genera una solicitud de apertura que el microcontrolador interpretará y hará accionar al motor. Esto es el estado: **"CERRADO"**
 
