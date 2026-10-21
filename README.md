@@ -9,6 +9,6 @@ El estado **"ABRIENDO"** se encargara de elevar la barrera hasta que toque un fi
 
 Luego de que ocurra eso pasaremos al estado **"ABIERTO"** en donde un sensor infrarrojo, estara leyendo constantemente si hay un auto en la zona de la barrera, de haberlo, la barrera permanecerá arriba. De no haberlo comenzará a bajar nuevamente. Y pasaremos al estado **"CERRANDO"**
 
-En el estado **"CERRANDO"** La barrera bajará hasta tocar otro final de carrera. Y de esta menera volvera al primer estado.
+En el estado **"CERRANDO"** la barrera bajará hasta tocar otro final de carrera. Y de esta menera volvera al primer estado.
 
-Si estamos en el estado **"CERRANDO"** se detecta algún vehículo con el sensor, está frenará su bajada y volverá a subir, volviendo al estado **"ABRIENDO".**
+Si estamos en el estado **"CERRANDO"** y se detecta algún vehículo con el sensor, está frenará su bajada y volverá a subir, volviendo al estado **"ABRIENDO".**
