@@ -12,3 +12,6 @@ Luego de que ocurra eso pasaremos al estado **"ABIERTO"** en donde un sensor inf
 En el estado **"CERRANDO"** la barrera bajará hasta tocar otro final de carrera. Y de esta menera volvera al primer estado.
 
 Si estamos en el estado **"CERRANDO"** y se detecta algún vehículo debajo de la barrera, está frenará su bajada y volverá a subir, volviendo al estado **"ABRIENDO".**
+
+<img width="1002" height="721" alt="image" src="https://github.com/user-attachments/assets/b11e3c12-39c8-4144-84a0-f12294ae6853" />
+
