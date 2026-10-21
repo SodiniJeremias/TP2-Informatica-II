@@ -3,12 +3,12 @@
 ## Memoria descriptiva:
 En este sistema vamos a implementar un control automático para la barrera de un estacionamiento. 
 
-En un primer momento la barrera permanecerá abajo, evitando el paso de vehículos. 
+En un primer momento la barrera permanecerá abajo, evitando el paso de vehículos. Cuando una persona toque el botón  genera una solicitud de apertura que el microcontrolador interpretará y hará accionar al motor. Esto es el estado: **"Cerrado"**
 
-Esto quedará así hasta que una persona toque un botón. Esto genera una solicitud de apertura que el microcontrolador interpretará y hará accionar al motor. El motor elevará la barrera hasta que toque un final de carrera. Ahí el motor tiene que detenerse. 
+El estado **"Abriendo"** se encargara de elevar la barrera hasta que toque un final de carrera y detener el motor cuando esto suceda.
 
-Llegado a este estado, con un sensor infrarrojo, estaremos leyendo constantemente si hay un auto en la zona de la barrera, de haberlo, la barrera permanecerá arriba. De no haberlo comenzará a bajar nuevamente.
+Luego de que ocurra eso pasaremos al estado **"Abierto"** en donde un sensor infrarrojo, estara leyendo constantemente si hay un auto en la zona de la barrera, de haberlo, la barrera permanecerá arriba. De no haberlo comenzará a bajar nuevamente. Y pasaremos al estado **"Cerrando"**
 
-Si mientras la barrera está bajando se detecta algún vehículo, está frenará su bajada y volverá a subir. 
+En el estado **"Cerrando"** La barrera bajará hasta tocar otro final de carrera. Y de esta menera volvera al primer estado.
 
-La barrera bajará hasta tocar otro final de carrera. Y de esta menera volvera al primer estado.
+Si estamos en el estado **"Cerrando"** se detecta algún vehículo con el sensor, está frenará su bajada y volverá a subir, volviendo al estado **"Abriendo".**
