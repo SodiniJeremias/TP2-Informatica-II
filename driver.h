@@ -5,7 +5,7 @@
 
 #define MOTOR_ABRE  PB4
 #define MOTOR_CIERRA  PB5
-#define MOTOR_ACTIVADO  PB7
+#define MOTOR_ACTIVADO  PD7
 
 void init_mcu();
 int f_leer_boton();
