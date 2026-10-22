@@ -5,7 +5,7 @@ void init_mcu()
 {
   	DDRB |= (1 << MOTOR_ABRE);
 	DDRB |= (1 << MOTOR_CIERRA); 
-  	DDRD |= (1 << PD7);
+  	DDRD |= (1 << MOTOR_ACTIVADO);
   	f_parar();
 }
 
@@ -47,19 +47,19 @@ int f_leer_fin_cierre()
 
 void f_abrir()
 {
-    PORTD |= (1 << PD7); 
+    PORTD |= (1 << MOTOR_ACTIVADO); 
     PORTB |= (1 << MOTOR_ABRE);
     PORTB &= ~(1 << MOTOR_CIERRA);
 }
 
 void f_cerrar()
 {
-    PORTD |= (1 << PD7);
+    PORTD |= (1 << MOTOR_ACTIVADO);
     PORTB |= (1 << MOTOR_CIERRA);
     PORTB &= ~(1 << MOTOR_ABRE);
 }
 
 void f_parar()
 {
-    PORTD &= ~(1 << PD7);
+    PORTD &= ~(1 << MOTOR_ACTIVADO);
 }
