@@ -5,19 +5,19 @@ void init_mcu()
 {
 	GpioInitStructure_AVR PUERTOS;
 	
-	sens.port =	avr_GPIO_B;
-	sens.modo = 	avr_GPIO_mode_Input;
-	sens.pines =	BOTON | SENSOR_PRESENCIA | FINAL_CARRRERA_ABIERTO | FINAL_CARRERA_CERRADO;
+	PUERTOS.port =	avr_GPIO_B;
+	PUERTOS.modo = 	avr_GPIO_mode_Input;
+	PUERTOS.pines =	BOTON | SENSOR_PRESENCIA | FINAL_CARRRERA_ABIERTO | FINAL_CARRERA_CERRADO;
 	init_gpio (PUERTOS);
 
-	sens.port =	avr_GPIO_B;
-	sens.modo = 	avr_GPIO_mode_Output;
-	sens.pines =	MOTOR_ABRE | MOTOR_CIERRA;
+	PUERTOS.port =	avr_GPIO_B;
+	PUERTOS.modo = 	avr_GPIO_mode_Output;
+	PUERTOS.pines =	MOTOR_ABRE | MOTOR_CIERRA;
 	init_gpio (PUERTOS);
 
-	sens.port =	avr_GPIO_D;
-	sens.modo = 	avr_GPIO_mode_Output;
-	sens.pines =	MOTOR_ACTIVADO;
+	PUERTOS.port =	avr_GPIO_D;
+	PUERTOS.modo = 	avr_GPIO_mode_Output;
+	PUERTOS.pines =	MOTOR_ACTIVADO;
 	init_gpio (PUERTOS);
 	
   	DDRB |= (1 << MOTOR_ABRE);
