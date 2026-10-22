@@ -15,3 +15,7 @@ Si estamos en el estado **"CERRANDO"** y se detecta algún vehículo debajo de l
 ## Maquina de estado:
 <img width="1002" height="721" alt="image" src="https://github.com/user-attachments/assets/b11e3c12-39c8-4144-84a0-f12294ae6853" />
 
+
+Prueba en Proteus 8:
+https://github.com/user-attachments/assets/14747361-fd63-4b47-bddc-36551e4019de
+
