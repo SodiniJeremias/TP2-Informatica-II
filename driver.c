@@ -19,12 +19,8 @@ void init_mcu()
 	PUERTOS.modo = 	avr_GPIO_mode_Output;
 	PUERTOS.pines =	MOTOR_ACTIVADO;
 	init_gpio (PUERTOS);
-	
-  	DDRB |= (1 << MOTOR_ABRE);
-	DDRB |= (1 << MOTOR_CIERRA); 
-  	DDRD |= (1 << MOTOR_ACTIVADO);
+
   	f_parar();
-	
 }
 
 int f_leer_boton()
