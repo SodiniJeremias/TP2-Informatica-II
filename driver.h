@@ -9,8 +9,8 @@
 #define MOTOR_CIERRA  PB5
 #define MOTOR_ACTIVADO  PD7
 
-#define POR1 avr_GPIO_B
-#define PORT2 avr_GPIO_D
+#define PORTB avr_GPIO_B
+#define PORTD avr_GPIO_D
 
 void init_mcu();
 int f_leer_boton();
