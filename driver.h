@@ -1,3 +1,5 @@
+#include "avr_api/avr_api.h"
+
 #define BOTON  PB0
 #define SENSOR_PRESENCIA  PB1
 #define FINAL_CARRERA_ABIERTO  PB2
