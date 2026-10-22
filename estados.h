@@ -7,6 +7,7 @@ typedef enum {
 
 estados_t (*funciones_estado[4])();
 
+void enumerar_funciones(void);
 estados_t f_cerrada();
 estados_t f_abriendo();
 estados_t f_abierta();
