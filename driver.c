@@ -1,5 +1,13 @@
-#include "mylib.h"
 #include <avr/io.h>
+#include “driver.h”
+
+void init_mcu()
+{
+  	DDRB |= (1 << PB4);
+	DDRB |= (1 << PB5); 
+  	DDRD |= (1 << PD7);
+  	f_parar();
+}
 
 int f_leer_boton()
 {
@@ -54,51 +62,4 @@ void f_cerrar()
 void f_parar()
 {
     PORTD &= ~(1 << PD7);
-}
-
-estados_t f_cerrada()
-{
-    if (f_leer_boton() == 1)
-    {
-        f_abrir();
-        return ABRIENDO; 
-    }
-
-    return CERRADA;
-}
-
-estados_t f_abierta()
-{
-    if(f_leer_presencia() == 0)
-	{
-		f_cerrar();
-		return CERRANDO;
-	}
-
-    return ABIERTA;
-}
-
-estados_t f_abriendo()
-{
-  if(f_leer_fin_apertura() == 1)
-	{
-		f_parar();
-		return ABIERTA;
-	}
-	return ABRIENDO;
-}
-
-estados_t f_cerrando()
-{
-	if(f_leer_presencia() == 1)
-	{
-		f_abrir();
-		return ABRIENDO;
-	}
-	else if(f_leer_fin_cierre() == 1)
-	{
-		f_parar();
-		return CERRADA;
-	}
-	return CERRANDO;
 }
