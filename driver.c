@@ -1,4 +1,3 @@
-#include <avr/io.h>
 #include "driver.h"
 
 void init_mcu()
@@ -59,7 +58,7 @@ void f_cerrar()
 
 void f_parar()
 {
-	clear_pin(avr_GPIO_B, 7);
+	clear_pin(avr_GPIO_D, 7);
 	clear_pin(avr_GPIO_B, 4);
 	clear_pin(avr_GPIO_B, 5);
 }
