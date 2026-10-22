@@ -1,10 +1,9 @@
 #include "estados.h"
 #include "driver.h"
 
-estados_t estado = CERRADA;
-
 main()
 {
+	estados_t estado = CERRADA;
 	init_mcu();
 	enumerar_funciones();
 
