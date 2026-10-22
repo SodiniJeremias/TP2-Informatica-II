@@ -3,17 +3,28 @@
 
 void init_mcu()
 {
-	GpioInitStructure_AVR sens;
+	GpioInitStructure_AVR PUERTOS;
 	
 	sens.port =	avr_GPIO_B;
 	sens.modo = 	avr_GPIO_mode_Input;
-	sens.pine s=	SENS_DER_PIN | SENS_DERC_PIN | SENS_CEN_PIN | SENS_IZQC_PIN | SENS_IZQ_PIN;
-	init_gpio (sens);
+	sens.pines =	BOTON | SENSOR_PRESENCIA | FINAL_CARRRERA_ABIERTO | FINAL_CARRERA_CERRADO;
+	init_gpio (PUERTOS);
+
+	sens.port =	avr_GPIO_B;
+	sens.modo = 	avr_GPIO_mode_Output;
+	sens.pines =	MOTOR_ABRE | MOTOR_CIERRA;
+	init_gpio (PUERTOS);
+
+	sens.port =	avr_GPIO_D;
+	sens.modo = 	avr_GPIO_mode_Output;
+	sens.pines =	MOTOR_ACTIVADO;
+	init_gpio (PUERTOS);
 	
   	DDRB |= (1 << MOTOR_ABRE);
 	DDRB |= (1 << MOTOR_CIERRA); 
   	DDRD |= (1 << MOTOR_ACTIVADO);
   	f_parar();
+	
 }
 
 int f_leer_boton()
