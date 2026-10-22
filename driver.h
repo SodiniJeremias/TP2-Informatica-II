@@ -1,13 +1,13 @@
 #include "avr_api/avr_api.h"
 
-#define BOTON  PB0
-#define SENSOR_PRESENCIA  PB1
-#define FINAL_CARRERA_ABIERTO  PB2
-#define FINAL_CARRERA_CERRADO  PB3
+#define BOTON                  avr_GPIO_PIN_0
+#define SENSOR_PRESENCIA       avr_GPIO_PIN_1
+#define FINAL_CARRERA_ABIERTO  avr_GPIO_PIN_2
+#define FINAL_CARRERA_CERRADO  avr_GPIO_PIN_3
 
-#define MOTOR_ABRE  PB4
-#define MOTOR_CIERRA  PB5
-#define MOTOR_ACTIVADO  PD7
+#define MOTOR_ABRE             avr_GPIO_PIN_4
+#define MOTOR_CIERRA           avr_GPIO_PIN_5
+#define MOTOR_ACTIVADO         avr_GPIO_PIN_7
 
 void init_mcu();
 int f_leer_boton();
