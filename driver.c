@@ -25,55 +25,41 @@ void init_mcu()
 
 int f_leer_boton()
 {
-    int lectura_boton;
-
-    lectura_boton = (PINB & (1 << BOTON)) != 0;
-
-   return lectura_boton;
+	return avr_GPIOB_IN_0;
 }
 
 int f_leer_presencia()
 {
-    int lectura_sensor;
-
-    lectura_sensor =  (PINB & (1 << SENSOR_PRESENCIA)) != 0;
-
-    return lectura_sensor;
+    return avr_GPIOB_IN_1;
 }
 
 int f_leer_fin_apertura()
 {
-    int lectura_final_carrera_1;
-
-   lectura_final_carrera_1 =  (PINB & (1 << FINAL_CARRRERA_ABIERTO)) != 0;
-
-   return lectura_final_carrera_1;
+   return avr_GPIOB_IN_2;
 }
 
 int f_leer_fin_cierre()
 {
-    int lectura_final_carrera_2;
-
-   lectura_final_carrera_2 =  (PINB & (1 << FINAL_CARRRERA_CERRADO)) != 0; 
-
-   return lectura_final_carrera_2;
+     return avr_GPIOB_IN_3;
 }
 
 void f_abrir()
 {
-    PORTD |= (1 << MOTOR_ACTIVADO); 
-    PORTB |= (1 << MOTOR_ABRE);
-    PORTB &= ~(1 << MOTOR_CIERRA);
+    set_pin(avr_GPIO_D, 7);
+    set_pin(avr_GPIO_B, 4);
+    clear_pin(avr_GPIO_B, 5);
 }
 
 void f_cerrar()
 {
-    PORTD |= (1 << MOTOR_ACTIVADO);
-    PORTB |= (1 << MOTOR_CIERRA);
-    PORTB &= ~(1 << MOTOR_ABRE);
+    set_pin(avr_GPIO_D, 7);
+    clear_pin(avr_GPIO_B, 4);
+    set_pin(avr_GPIO_B, 5);
 }
 
 void f_parar()
 {
-    PORTD &= ~(1 << MOTOR_ACTIVADO);
+	clear_pin(avr_GPIO_B, 7);
+	clear_pin(avr_GPIO_B, 4);
+	clear_pin(avr_GPIO_B, 5);
 }
