@@ -22,11 +22,11 @@ https://github.com/user-attachments/assets/4df2cf7d-e850-4191-a4a0-a7a0a7fb8ff0
 
 Secuencia del video:
 
-Estado "CERRADO": Empieza con el motor detenido ya que el "final_carrera_cerrado" detecta que la barrera esta abajo. Se identifica la presencia de un vehículo con el "sensor_presencia" y se toca el boton. Esto hace que se active el motor.
++ Estado "CERRADO": Empieza con el motor detenido ya que el "final_carrera_cerrado" detecta que la barrera esta abajo. Se identifica la presencia de un vehículo con el "sensor_presencia" y se toca el boton. Esto hace que se active el motor.
 
-Estado "ABRIENDO": Como se mueve el motor, la barrera sube y deja de tocar al "final_carrera_cerrado". La barrera subira hasta que active el "final_carrera_abierto". 
++ Estado "ABRIENDO": Como se mueve el motor, la barrera sube y deja de tocar al "final_carrera_cerrado". La barrera subira hasta que active el "final_carrera_abierto". 
 
-Estado "ABIERTO": Una vez activado el "final_carrera_abierto" el motor se detendra. 
++ Estado "ABIERTO": Una vez activado el "final_carrera_abierto" el motor se detendra. 
 
-Estado "CERRANDO": el "sensor_presencia" deja de detectar al vehiculo lo cual hace que el motor se active y gire en la direccion inversa a como lo hizo cuando se abrio. Gracias a que la barrera ahora baja deja de tocar el 
++ Estado "CERRANDO": el "sensor_presencia" deja de detectar al vehiculo lo cual hace que el motor se active y gire en la direccion inversa a como lo hizo cuando se abrio. Gracias a que la barrera ahora baja deja de tocar el 
 "final_carrera_abierto". El motor se detiene cuando toca el "final_carrera_cerrado"
