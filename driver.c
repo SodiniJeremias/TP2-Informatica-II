@@ -3,6 +3,13 @@
 
 void init_mcu()
 {
+	GpioInitStructure_AVR sens;
+	
+	sens.port =	SENS_PORT;
+	sens.modo = 	avr_GPIO_mode_Input;
+	sens.pine s=	SENS_DER_PIN | SENS_DERC_PIN | SENS_CEN_PIN | SENS_IZQC_PIN | SENS_IZQ_PIN;
+	init_gpio (sens);
+	
   	DDRB |= (1 << MOTOR_ABRE);
 	DDRB |= (1 << MOTOR_CIERRA); 
   	DDRD |= (1 << MOTOR_ACTIVADO);
