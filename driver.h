@@ -1,5 +1,8 @@
 #include "avr_api/avr_api.h"
 
+#define PUERTO_B avr_GPIO_B
+#define PUERTO_D avr_GPIO_D
+
 #define BOTON  avr_GPIO_PIN_0
 #define SENSOR_PRESENCIA  avr_GPIO_PIN_1
 #define FINAL_CARRERA_ABIERTO  avr_GPIO_PIN_2
