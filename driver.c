@@ -44,21 +44,21 @@ int f_leer_fin_cierre()
 
 void f_abrir()
 {
-    set_pin(PUERTO_D, 7);
-    set_pin(PUERTO_B, 4);
-    clear_pin(PUERTO_B, 5);
+    set_pin(PUERTO_D, MOTOR_ACTIVADO);
+    set_pin(PUERTO_B, MOTOR_ABRE);
+    clear_pin(PUERTO_B, MOTOR_CIERRA);
 }
 
 void f_cerrar()
 {
-    set_pin(PUERTO_D, 7);
-    clear_pin(PUERTO_B, 4);
-    set_pin(PUERTO_B, 5);
+    set_pin(PUERTO_D, MOTOR_ACTIVADO);
+    clear_pin(PUERTO_B, MOTOR_ABRE);
+    set_pin(PUERTO_B, MOTOR_CIERRA);
 }
 
 void f_parar()
 {
-	clear_pin(PUERTO_D, 7);
-	clear_pin(PUERTO_B, 4);
-	clear_pin(PUERTO_B, 5);
+	clear_pin(PUERTO_D, MOTOR_ACTIVADO);
+	clear_pin(PUERTO_B, MOTOR_ABRE);
+	clear_pin(PUERTO_B, MOTOR_CIERRA);
 }
