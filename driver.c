@@ -2,22 +2,22 @@
 
 void init_mcu()
 {
-	GpioInitStructure_AVR PUERTOS;
+	GpioInitStructure_AVR puertos;
 	
-	PUERTOS.port =	avr_GPIO_B;
-	PUERTOS.modo = 	avr_GPIO_mode_Input;
-	PUERTOS.pines =	BOTON | SENSOR_PRESENCIA | FINAL_CARRERA_ABIERTO | FINAL_CARRERA_CERRADO;
-	init_gpio (PUERTOS);
+	puertos.port =	avr_GPIO_B;
+	puertos.modo = 	avr_GPIO_mode_Input;
+	puertos.pines =	BOTON | SENSOR_PRESENCIA | FINAL_CARRERA_ABIERTO | FINAL_CARRERA_CERRADO;
+	init_gpio (puertos);
 
-	PUERTOS.port =	avr_GPIO_B;
-	PUERTOS.modo = 	avr_GPIO_mode_Output;
-	PUERTOS.pines =	MOTOR_ABRE | MOTOR_CIERRA;
-	init_gpio (PUERTOS);
+	puertos.port =	avr_GPIO_B;
+	puertos.modo = 	avr_GPIO_mode_Output;
+	puertos.pines =	MOTOR_ABRE | MOTOR_CIERRA;
+	init_gpio (puertos);
 
-	PUERTOS.port =	avr_GPIO_D;
-	PUERTOS.modo = 	avr_GPIO_mode_Output;
-	PUERTOS.pines =	MOTOR_ACTIVADO;
-	init_gpio (PUERTOS);
+	puertos.port =	avr_GPIO_D;
+	puertos.modo = 	avr_GPIO_mode_Output;
+	puertos.pines =	MOTOR_ACTIVADO;
+	init_gpio (puertos);
 
   	f_parar();
 }
