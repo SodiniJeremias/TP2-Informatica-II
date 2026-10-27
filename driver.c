@@ -24,22 +24,22 @@ void init_mcu()
 
 int f_leer_boton()
 {
-	return avr_GPIOB_IN_0;
+	return BOTON_IN;
 }
 
 int f_leer_presencia()
 {
-    return avr_GPIOB_IN_1;
+    return SENSOR_PRESENCIA_IN;
 }
 
 int f_leer_fin_apertura()
 {
-   return avr_GPIOB_IN_2;
+   return FIN_APERTURA_IN;
 }
 
 int f_leer_fin_cierre()
 {
-     return avr_GPIOB_IN_3;
+     return FIN_CIERRE_IN;
 }
 
 void f_abrir()
