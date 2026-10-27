@@ -4,14 +4,20 @@
 #define PUERTO_D avr_GPIO_D
 
 #define BOTON  avr_GPIO_PIN_0
-#define SENSOR_PRESENCIA  avr_GPIO_PIN_1
-#define FINAL_CARRERA_ABIERTO  avr_GPIO_PIN_2
-#define FINAL_CARRERA_CERRADO  avr_GPIO_PIN_3
+#define BOTON_IN  avr_GPIOB_IN_0
 
-#define BOTON_IN              avr_GPIOB_IN_0
+#define SENSOR_PRESENCIA  avr_GPIO_PIN_1
 #define SENSOR_PRESENCIA_IN   avr_GPIOB_IN_1
+
+#define FINAL_CARRERA_ABIERTO  avr_GPIO_PIN_2
 #define FIN_APERTURA_IN       avr_GPIOB_IN_2
+
+#define FINAL_CARRERA_CERRADO  avr_GPIO_PIN_3
 #define FIN_CIERRE_IN         avr_GPIOB_IN_3
+
+
+
+
 
 #define MOTOR_ABRE  avr_GPIO_PIN_4
 #define MOTOR_CIERRA avr_GPIO_PIN_5
